@@ -1,0 +1,41 @@
+ALGORITHM CheckpointAlgo
+
+/*
+s:sentence
+s_l:length of the sentence
+num_w:number of words
+num_v:number of vowels
+*/
+VAR
+    s_l,num_w,num_v,i,j,k : INTEGER;
+    s : STRING;
+   
+	
+BEGIN
+
+    Read(s);
+
+    WHILE(s[i] <> ".") DO
+    s_l := s_l + 1;
+    i := i + 1 ;
+    END_WHILE
+
+    WHILE(j<s_l) DO
+    IF(s[j] = " ") THEN
+    num_w := num_w+1;
+    END_IF
+    j:=j+1;
+    END_WHILE
+    
+    WHILE(k<s_l) DO
+    IF(s[k] = "a" OR s[k] = "e" OR s[k] = "i" OR s[k] = "o" OR s[k] = "u") THEN
+    num_v := num_v+1;
+    END_IF
+    k:=k+1;
+    END_WHILE
+
+    Write(s_l);
+    Write(num_w);
+    Write(num_v;
+
+END
